@@ -222,6 +222,7 @@ button {
         width: 50%;
         background-color: var(--body-color);
         top: 0;
+        display: none;
         right: -100%;
         height: 100%;
         box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, .15);

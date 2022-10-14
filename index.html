@@ -58,10 +58,10 @@
                     <li class="nav_item">
                         <a href="#discover" class="nav_link">Discover</a>
                     </li>
-                    <div class="nav_dark">
+                    <!-- <div class="nav_dark">
                         <span class="change-theme-name">Dark Mode</span>
                         <i class="fa-solid fa-moon change-theme" id="theme-button"></i>
-                    </div>
+                    </div> -->
                 </ul>     
 
                 <i class="fa-solid fa-xmark nav_close" id="nav-close"></i>
@@ -335,6 +335,26 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js" async defer></script>
     <script>
+        /*==================== SHOW MENU ====================*/
+        const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+        /*===== MENU SHOW =====*/
+        /* Validate if constant exists */
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        /*===== MENU HIDDEN =====*/
+        /* Validate if constant exists */
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu')
+            })
+        }
         /*==================== SHOW SCROLL UP ====================*/
         function scrollUp() {
             const scrollUp = document.getElementById('scroll-up');
